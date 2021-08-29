@@ -1,0 +1,57 @@
+{
+    "identityPoolName": "cognitoe32053f1_identitypool_e32053f1",
+    "allowUnauthenticatedIdentities": false,
+    "thirdPartyAuth": false,
+    "lambdaLogPolicy": "cognitoe32053f1_lambda_log_policy",
+    "openIdLambdaRoleName": "cognitoe32053f1_openid_lambda_role",
+    "openIdRolePolicy": "cognitoe32053f1_openid_pass_role_policy",
+    "openIdLambdaIAMPolicy": "cognitoe32053f1_openid_lambda_iam_policy",
+    "openIdLogPolicy": "cognitoe32053f1_openid_lambda_log_policy",
+    "userPoolName": "cognitoe32053f1_userpool_e32053f1",
+    "autoVerifiedAttributes": [
+        "email"
+    ],
+    "mfaConfiguration": "OFF",
+    "mfaTypes": [
+        "SMS Text Message"
+    ],
+    "roleName": "cognitoe32053f1_sns-role",
+    "roleExternalId": "cognitoe32053f1_role_external_id",
+    "policyName": "cognitoe32053f1-sns-policy",
+    "smsAuthenticationMessage": "Your authentication code is {####}",
+    "smsVerificationMessage": "Your verification code is {####}",
+    "emailVerificationSubject": "Your verification code",
+    "emailVerificationMessage": "Your verification code is {####}",
+    "defaultPasswordPolicy": false,
+    "passwordPolicyMinLength": 8,
+    "passwordPolicyCharacters": [
+        "Requires Lowercase",
+        "Requires Uppercase",
+        "Requires Numbers",
+        "Requires Symbols"
+    ],
+    "requiredAttributes": [
+        "email"
+    ],
+    "userpoolClientName": "cognitoe32053f1_app_client",
+    "userpoolClientGenerateSecret": true,
+    "userpoolClientRefreshTokenValidity": 30,
+    "userpoolClientReadAttributes": [
+        "email"
+    ],
+    "mfaLambdaRole": "cognitoe32053f1_totp_lambda_role",
+    "mfaLambdaLogPolicy": "cognitoe32053f1_totp_lambda_log_policy",
+    "mfaPassRolePolicy": "cognitoe32053f1_totp_pass_role_policy",
+    "mfaLambdaIAMPolicy": "cognitoe32053f1_totp_lambda_iam_policy",
+    "userpoolClientLambdaRole": "cognitoe32053f1_userpoolclient_lambda_role",
+    "userpoolClientLogPolicy": "cognitoe32053f1_userpoolclient_lambda_log_policy",
+    "userpoolClientLambdaPolicy": "cognitoe32053f1_userpoolclient_lambda_iam_policy",
+    "userpoolClientSetAttributes": false,
+    "useDefault": "default",
+    "unAuthRoleName": "arvobile-20190125114516-unauthRole",
+    "authRoleName": "arvobile-20190125114516-authRole",
+    "unAuthRoleArn": "arn:aws:iam::002334737704:role/arvobile-20190125114516-unauthRole",
+    "authRoleArn": "arn:aws:iam::002334737704:role/arvobile-20190125114516-authRole",
+    "resourceName": "cognitoe32053f1",
+    "authSelections": "identityPoolAndUserPool"
+}

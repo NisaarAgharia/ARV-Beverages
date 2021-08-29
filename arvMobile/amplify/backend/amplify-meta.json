@@ -1,0 +1,14 @@
+{
+    "providers": {
+        "awscloudformation": {
+            "AuthRoleName": "arvobile-20190127134056-authRole",
+            "UnauthRoleArn": "arn:aws:iam::002334737704:role/arvobile-20190127134056-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::002334737704:role/arvobile-20190127134056-authRole",
+            "Region": "ap-south-1",
+            "DeploymentBucketName": "arvobile-20190127134056-deployment",
+            "UnauthRoleName": "arvobile-20190127134056-unauthRole",
+            "StackName": "arvobile-20190127134056",
+            "StackId": "arn:aws:cloudformation:ap-south-1:002334737704:stack/arvobile-20190127134056/1261ba50-220b-11e9-a333-065ce6fc7b58"
+        }
+    }
+}
