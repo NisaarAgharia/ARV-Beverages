@@ -40,7 +40,7 @@ import { AddExpensePipe } from './add-expense.pipe';
     FormsModule,AmplifyAngularModule,
     BrowserModule, IonicModule.forRoot(),AppRoutingModule,MapAddressPageModule,HttpClientModule,OOPSPageModule,LocalityfinderPageModule,DeliveryBoyCardPageModule,SalesHistoryPageModule,UserProfilePageModule,InformationPageModule,StoreOwnerPageModule,HomePageModule,
     AgmCoreModule.forRoot({
-    apiKey: 'AIzaSyAzNeRtGK361U5B1unU7H76QaRLC5WMKP4'
+    apiKey: ''
   }),
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })],
   providers: [Geolocation,
