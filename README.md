@@ -8,13 +8,17 @@ Factory, Store, Delivery, Admin.
 
 # The Features include - 
 Adding New Stores, 
-Add Orders, 
-Pending Orders, 
-Map View, 
+Add New Orders, 
+Track Pending Orders, 
+Get Map View, 
 Locate Stores, 
-Daily Status, 
+Track Daily Status, 
 
+# Screen Shots
 ![Home Page](https://user-images.githubusercontent.com/22457544/131250399-f83b58af-8bc5-4153-bd4d-bb5930ef4fd6.png)
+![pending_orders](https://user-images.githubusercontent.com/22457544/131250569-78e70561-7474-4346-81be-13d1032aab84.png)
+![New Store](https://user-images.githubusercontent.com/22457544/131250606-592cb28f-6b5d-4c31-aa65-1b17355828bf.png)
+
 
 
 
