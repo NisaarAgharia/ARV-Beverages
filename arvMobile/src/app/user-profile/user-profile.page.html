@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="danger">
+      <ion-buttons slot="start">
+          <ion-button (click)="back()">
+              <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    <ion-title text-center bold >Profile/Users</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+        <ion-card *ngFor="let usertype of Users" (click)="Usertype(usertype.data)">
+                <ion-card-header>
+                    <ion-icon name="person"></ion-icon>
+                    <ion-card-title>{{usertype.userType}}</ion-card-title>
+                </ion-card-header>
+                <ion-card-content>
+                        <ion-label color="danger">
+                                {{usertype.data[0].name}}
+                                {{usertype.data[0].Phone_Number}}
+                                {{usertype.data[0].email_id}}
+                                {{usertype.data[0].address}}
+                        </ion-label>
+                       
+                        
+                      </ion-card-content>
+            </ion-card>
+        
+</ion-content>

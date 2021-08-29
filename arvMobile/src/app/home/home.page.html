@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="end">
+      <ion-button (click)="signin()">
+        <ion-icon slot="icon-only" name="person-add"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title text-center bold>
+      Welcome To ARV
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid no-padding>
+    <ion-row>
+      <ion-col size="12" size-sm="8" offset-sm="2" text-center>
+        <ion-card>
+           
+          <!-- <ion-img src="./../../assets/toolbar.png" ></ion-img>     -->
+          <ion-card-content>
+            <p bold>
+              We are a beverage company based in Pune, So Clinch your thurst and
+              have a sample for FREE at your doorstep. Click Below!
+            </p>
+          </ion-card-content>
+          <!-- <div text-center>
+            <ion-button
+              fill="clear"
+              bold
+              color="primary"
+              [routerLink]="['/', 'login']"
+              >Login</ion-button
+            >
+          </div> -->
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed" no-padding>
+    <ion-fab-button size="large" color="light">
+      <img src="./../../assets/ARV.gif" />
+    </ion-fab-button>
+
+    <ion-fab-list side="end">
+      <ion-fab-button [routerLink]="['/', 'pws-stores-nearby']"
+        ><ion-icon name="aperture"></ion-icon
+      ></ion-fab-button>
+      <ion-label color="danger" bold>ARV Stores Near You</ion-label>
+    </ion-fab-list>
+    <ion-fab-list side="top">
+      <ion-fab-button [routerLink]="['/', 'pws-order']"
+        ><ion-icon name="beer"></ion-icon
+      ></ion-fab-button>
+      <ion-label color="danger" bold>Order</ion-label>
+    </ion-fab-list>
+    <ion-fab-list side="start">
+      <ion-fab-button [routerLink]="['/', 'pws-free-sample']"
+        >Drink</ion-fab-button
+      >
+      <ion-label color="danger" bold>Free</ion-label>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>

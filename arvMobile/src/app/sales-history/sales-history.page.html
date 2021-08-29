@@ -1,0 +1,24 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-button (click)="back()">
+                <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+              </ion-button>
+          </ion-buttons>
+      <ion-title color="danger">
+          {{viewTitle}}
+      </ion-title>
+      <ion-button slot="end" color="danger" (click)="today()">Today</ion-button>
+    </ion-toolbar>
+  </ion-header>
+<ion-content>
+        <ion-row>
+                <ion-col>
+	<calendar 
+   [calendarMode]="calendar.mode" [currentDate]="calendar.currentDate"
+	 (onEventSelected)="onEventSelected($event)" (onTitleChanged)="onViewTitleChanged($event)"
+	 (onTimeSelected)="onTimeSelected($event)" step="30">
+  </calendar>
+</ion-col>
+  </ion-row>
+</ion-content>

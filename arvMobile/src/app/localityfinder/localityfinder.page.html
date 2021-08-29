@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar color="danger">
+      <ion-buttons slot="start">
+          <ion-button (click)="back()">
+              <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+      <ion-title text-center bold >Select Locality</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+  
+  <ion-content padding>
+    <ion-list>
+        <div text-center>
+            <ion-spinner  name="dots" *ngIf="isLoading"></ion-spinner>
+        </div>
+      <ion-item>
+          <ion-label color="danger" bold floating >City</ion-label>
+          <ion-select (ionChange)="CitySelect(City)" [(ngModel)]="City">
+            <ion-select-option  [value]="key" *ngFor="let key of Cities">{{key}}</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+
+
+      <ion-list>
+        <ion-item>
+            <ion-label color="danger" bold floating >Locality</ion-label>
+            <ion-select (ionChange)="getLocation(Locality)" [(ngModel)]="Locality">
+              <ion-select-option  [value]="locality" *ngFor="let locality of LocalityArray">{{locality}}</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+
+          </ion-content>

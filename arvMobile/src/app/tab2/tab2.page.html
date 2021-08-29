@@ -1,0 +1,93 @@
+<ion-header>
+  <ion-toolbar  color="danger">
+      <ion-buttons slot="start">
+          <ion-button (click)="back()">
+              <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+            </ion-button>
+            <ion-button (click)="ionViewWillEnter()">
+                <ion-icon slot="icon-only" name="locate"></ion-icon>
+              </ion-button>
+        </ion-buttons>
+        
+
+        <ion-buttons slot="end">
+            <ion-button (click)="saveLocation()" [disabled]="!Form.valid">
+                <ion-icon slot="icon-only" name="add" ></ion-icon>
+              </ion-button>
+              
+          </ion-buttons>
+    <ion-title text-center bold>
+      Add New Store
+    </ion-title>
+  </ion-toolbar>  
+</ion-header>
+<ion-content no-padding>
+  <div text-center>
+      <ion-spinner name="crescent" *ngIf="isLoading"></ion-spinner>
+  </div>
+  <form [formGroup]="Form">
+<ion-grid no-padding>
+  <ion-row no-padding>
+      <ion-col size="12" size-sm="8" offset-sm="2" text-center no-padding>
+<ion-card color="light" no-padding>
+    <ion-grid  no-padding>
+        <ion-row  no-padding>
+            <ion-col size="12" size-sm="8" offset-sm="2" text-center >
+              <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [fullscreenControl]="true">
+                  <agm-marker [latitude]="lat" [longitude]="lng" [markerDraggable]="true"
+                  (dragEnd)="markerDragEnd(markers, $event)"></agm-marker>
+                  <agm-circle [latitude]="lat" [longitude]="lng" 
+                  [radius]="50"
+                  [fillColor]="'blue'"
+                  [circleDraggable]="false"
+                  [editable]="false">
+              </agm-circle>
+                </agm-map>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+          <ion-item>
+              <ion-label color="danger" position="floating" >Store Name</ion-label>
+            <ion-input #input type="text" required autocomplete formControlName="StoreName" ></ion-input>
+          </ion-item>
+
+          <ion-item>
+              <ion-label color="danger" position="floating" > Person Name</ion-label>
+            <ion-input  type="text" required formControlName="petName" ></ion-input>
+          </ion-item>
+
+          <ion-item>
+              <ion-label color="danger" position="floating">Mobile Number</ion-label>
+              <ion-input formControlName="PhoneNumber" type="number" required  [value]="ContactNumber" ></ion-input>
+            </ion-item>
+            </ion-card>
+
+            <ion-card >
+                <!-- <ion-card-header>
+                    <ion-card-title color="success">Address Details</ion-card-title>
+                   
+                  </ion-card-header> -->
+                <ion-item>
+                    <ion-label color="danger" position="floating">Enter Landmark</ion-label>
+                    <ion-input type="text" formControlName="FormLandmark" [value]="AdressFecthed.Landmark"></ion-input>
+                  </ion-item>
+                        
+                  <ion-item>
+                      <ion-label color="danger">Sub-Locality</ion-label>
+                      <ion-textarea formControlName="FormStreet" rows="4" type="text"  [value]="AdressFecthed.Street" required ></ion-textarea>
+                        </ion-item>
+                    <ion-item>
+                        <ion-label color="danger" position="floating">Locality/Area</ion-label>
+                        <ion-input formControlName="FormArea"  type="text"  required  [value]="AdressFecthed.Area" ></ion-input>
+                      </ion-item>
+                    <ion-item>
+                        <ion-label color="danger" position="floating">City/State/Pincode</ion-label>
+                        <ion-input formControlName="FormAddress" type="text"  required [value]="AdressFecthed.Address" ></ion-input>
+                      </ion-item>                      
+                      </ion-card>
+      </ion-col>
+  </ion-row>
+</ion-grid>
+</form>
+</ion-content>
+

@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar color="danger">
+      <ion-buttons slot="start">
+          <ion-button (click)="back()">
+              <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+      <ion-title text-center  bold>
+   Place Order
+  </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+      <ion-item>
+          <ion-input [(ngModel)]="OrderUnits" type="number" max="3" required position="floating" >Number of Units</ion-input>
+        </ion-item>
+    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+        <agm-marker [latitude]="lat" [longitude]="lng">
+
+        <agm-info-window [isOpen]=true>
+            <strong>
+              Locality : {{Locality}}<br/>
+              Address: {{address}} <br/>
+              Call Store --> <a href="tel:{{StorePhoneNumber}}">{{StoreName}}</a><br/>
+            </strong>
+          </agm-info-window>
+        </agm-marker>
+        <agm-circle [latitude]="lat" [longitude]="lng" 
+        [radius]="50"
+        [fillColor]="'blue'"
+        [circleDraggable]="false"
+        [editable]="false">
+    </agm-circle>
+      </agm-map>
+
+      
+      <ion-item>
+          <ion-label color="primary" position="floating" >Store</ion-label>
+        <ion-input [(ngModel)]="StoreName" type="text" clearInput required placeholder="Name"></ion-input>
+      </ion-item>
+     
+        <ion-button round  class = "button button-block" color="danger" (click)="ConfirmOrder()">Create Order</ion-button> 
+    </ion-list>
+</ion-content>

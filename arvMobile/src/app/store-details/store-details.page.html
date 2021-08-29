@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-title >Search store</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list>
+        <div text-center>
+            <ion-spinner  name="bubbles" *ngIf="isLoading"></ion-spinner>
+        </div>
+      <ion-item>
+          <ion-label color="danger" bold floating >City</ion-label>
+          <ion-select (ionChange)="CitySelect(City)" [(ngModel)]="City">
+            <ion-select-option  [value]="key" *ngFor="let key of Cities">{{key}}</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+
+      <ion-item>
+          <ion-label color="danger" position="floating">Locality</ion-label>
+          <ion-select (ionChange)="console(Locality)" [(ngModel)]="Locality">
+            <ion-select-option
+              [value]="locality"
+              *ngFor="let locality of LocalityArray"
+              >{{ locality }}</ion-select-option
+            >
+          </ion-select>
+        </ion-item>
+    <ion-searchbar
+      debounce="300"
+      animated
+      [(ngModel)]="searchTerm"
+      (ionInput)="setFilteredItems()"
+      (ionClear)="cancelFilter()"
+      (ionCancel)="cancelFilter()"
+      showCancelButton
+      cancelButtonText="Custom Cancel"
+    ></ion-searchbar>
+    <ion-list>
+      <div *ngIf="!isfilter">
+        <ion-card (click)="StoreSelected(store)" *ngFor="let store of StoreArray">
+          <ion-card-header>
+            <ion-card-title>{{ store.Name }}</ion-card-title>
+            <ion-card-subtitle>{{ store.address }}</ion-card-subtitle>
+          </ion-card-header>
+        </ion-card>
+      </div>
+      <div *ngIf="isfilter">
+        <ion-card
+          (click)="StoreSelected(store)"
+          *ngFor="let store of FilterArray"
+        >
+          <ion-card-header>
+            <ion-card-title>{{ store.Name }}</ion-card-title>
+            <ion-card-subtitle>{{ store.address }}</ion-card-subtitle>
+          </ion-card-header>
+        </ion-card>
+      </div>
+    </ion-list>
+</ion-content>

@@ -1,0 +1,138 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-button (click)="back()">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title text-center bold>Pending Orders</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div text-center>
+        <ion-spinner  name="dots" *ngIf="isLoading"></ion-spinner>
+    </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-sm="8">
+        <ion-searchbar
+          debounce="300"
+          animated
+          [(ngModel)]="searchTerm"
+          (ionInput)="setFilteredItems()"
+          (ionClear)="cancelFilter()"
+          (ionCancel)="cancelFilter()"
+          showCancelButton
+          cancelButtonText="clear"
+        ></ion-searchbar>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <div *ngIf="!isfilter">
+    <ion-card *ngFor="let orders of PendingOrdersArray">
+      <ion-item>
+        <p slot="start">
+          Store:
+          <ion-label slot="start" color="danger">{{ orders.Name }}</ion-label>
+        </p>
+        <p slot="end">
+          <a href="tel:{{ orders.PhoneNumber }}">
+            <ion-icon name="call"></ion-icon>
+          </a>
+        </p>
+      </ion-item>
+
+      <ion-card-content>
+        <ion-item color="tertiary-shade">
+          <p>Address:--> {{ orders.address }}</p>
+        </ion-item>
+
+        <ion-item>
+          <p slot="start">
+            Status :
+            <ion-label color="danger" floating>{{
+              orders.order_status
+            }}</ion-label>
+          </p>
+          <p slot="end">
+            Units :
+            <ion-label color="dark">{{ orders.units }}</ion-label>
+          </p>
+        </ion-item>
+        <ion-item>
+          <ion-button
+            (click)="updateStatus(orders)"
+            color="success"
+            slot="start"
+            >DONE</ion-button
+          >
+          <ion-input
+            [(ngModel)]="orders.CASH"
+            type="text"
+            maxlength="6"
+            required
+            placeholder="$$CASH$$"
+          ></ion-input>
+          <ion-button (click)="Navigate(orders)" color="secondary" slot="end"
+            >Directions</ion-button
+          >
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div *ngIf="isfilter">
+    <ion-card *ngFor="let orders of FilterArray">
+      <ion-item>
+        <p slot="start">
+          Store:
+          <ion-label slot="start" color="danger">{{ orders.Name }}</ion-label>
+        </p>
+        <p slot="end">
+          <a href="tel:{{ orders.PhoneNumber }}">
+            <ion-icon name="call"></ion-icon>
+          </a>
+        </p>
+      </ion-item>
+
+      <ion-card-content>
+        <ion-item color="tertiary-shade">
+          <p>Address:--> {{ orders.address }}</p>
+        </ion-item>
+
+        <ion-item>
+          <p slot="start">
+            Status :
+            <ion-label color="danger" floating>{{
+              orders.order_status
+            }}</ion-label>
+          </p>
+          <p slot="end">
+            Units :
+            <ion-label color="dark">{{ orders.units }}</ion-label>
+          </p>
+        </ion-item>
+        <ion-item>
+          <ion-button
+            (click)="updateStatus(orders)"
+            color="success"
+            slot="start"
+            >DONE</ion-button
+          >
+          <ion-input
+            [(ngModel)]="orders.CASH"
+            type="text"
+            maxlength="6"
+            required
+            placeholder="$$CASH$$"
+          ></ion-input>
+          <ion-button (click)="Navigate(orders)" color="secondary" slot="end"
+            >Directions</ion-button
+          >
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

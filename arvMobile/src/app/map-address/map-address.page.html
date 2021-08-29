@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="bold">
+      <ion-buttons slot="start">
+          <ion-button (click)="back()">
+              <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    <ion-title text-center bold>Save Store</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+    <ion-list> 
+        <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+            <agm-marker [latitude]="lat" [longitude]="lng">
+
+            <agm-info-window>
+                <strong>
+                  Store Name : {{StoreName}}<br/>
+                  Address: {{address}} <br/>
+                  Contact Number : {{StoreNumber}} 
+                </strong>
+              </agm-info-window>
+            </agm-marker>
+            <agm-circle [latitude]="lat" [longitude]="lng" 
+            [radius]="100"
+            [fillColor]="'green'"
+            [circleDraggable]="false"
+            [editable]="false">
+        </agm-circle>
+
+          </agm-map>
+        
+          <ion-button round  class = "button button-block" color="danger" (click)="goBack()">Save Store</ion-button>
+         
+</ion-list>
+        </ion-content>

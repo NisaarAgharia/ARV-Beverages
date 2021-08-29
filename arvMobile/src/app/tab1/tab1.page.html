@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar color="danger">
+      <ion-buttons slot="start">
+          <ion-button (click)="back()">
+              <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-buttons slot="end">
+            <ion-spinner name="bubbles" *ngIf="isLoading"></ion-spinner>
+            <ion-button (click)="home()">
+                <ion-icon slot="icon-only" name="home"></ion-icon>
+              </ion-button>
+          </ion-buttons>
+      <ion-title text-center bold>
+     {{locationArea.Area}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content> 
+  
+  <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [fullscreenControl]="true">
+    <agm-marker 
+    *ngFor="let m of marker" let i = "index"
+    [latitude]="m.lat"
+    [longitude]="m.lng"
+    [label]="m.labelOptions"
+    [markerDraggable]="m.draggable"
+    [iconUrl] ="m.icon"
+   >   
+  <agm-info-window>
+    <strong>
+      Call Store --> <a href="tel:{{m.StoreNumber}}">{{m.StoreName}}</a><br/>
+      Address: {{m.FormattedAddress}} <br/>
+      Status : {{m.Status}}
+      <ion-button (click)="Navigate(m)" fill="clear" color="primary" slot="end">Directions</ion-button>
+    </strong>
+  </agm-info-window>
+  
+</agm-marker>
+    <agm-circle [latitude]="lat" [longitude]="lng" 
+    [radius]="1500"
+    [fillColor]="'green'"
+    [circleDraggable]="false"
+    [editable]="false">
+</agm-circle>
+  </agm-map>
+</ion-content>

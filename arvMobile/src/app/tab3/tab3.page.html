@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-button (click)="back()">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title text-center bold>
+      Place Order
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <div text-center>
+        <ion-spinner  name="dots" *ngIf="isLoading"></ion-spinner>
+    </div>
+     
+    <ion-item>
+      <ion-label color="danger" position="floating">City</ion-label>
+      <ion-select (ionChange)="CitySelect(City)" [(ngModel)]="City">
+        <ion-select-option [value]="key" *ngFor="let key of Cities">{{
+          key
+        }}</ion-select-option>
+      </ion-select>
+    </ion-item>
+  
+    <ion-item>
+        <ion-label color="danger" position="floating">Locality</ion-label>
+        <ion-select (ionChange)="console(Locality)" [(ngModel)]="Locality">
+          <ion-select-option
+            [value]="locality"
+            *ngFor="let locality of LocalityArray"
+            >{{ locality }}</ion-select-option
+          >
+        </ion-select>
+      </ion-item>
+  </ion-list>
+
+  <ion-searchbar
+    debounce="300"
+    animated
+    [(ngModel)]="searchTerm"
+    (ionInput)="setFilteredItems()"
+    (ionClear)="cancelFilter()"
+    (ionCancel)="cancelFilter()"
+    showCancelButton
+    cancelButtonText="Custom Cancel"
+  ></ion-searchbar>
+  <ion-list>
+    <div *ngIf="!isfilter">
+      <ion-card (click)="StoreSelected(store)" *ngFor="let store of StoreArray">
+        <ion-card-header>
+          <ion-card-title>{{ store.Name }}</ion-card-title>
+          <ion-card-subtitle>{{ store.address }}</ion-card-subtitle>
+        </ion-card-header>
+      </ion-card>
+    </div>
+    <div *ngIf="isfilter">
+      <ion-card
+        (click)="StoreSelected(store)"
+        *ngFor="let store of FilterArray"
+      >
+        <ion-card-header>
+          <ion-card-title>{{ store.Name }}</ion-card-title>
+          <ion-card-subtitle>{{ store.address }}</ion-card-subtitle>
+        </ion-card-header>
+      </ion-card>
+    </div>
+  </ion-list>
+</ion-content>
