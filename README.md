@@ -30,8 +30,6 @@ Track Daily Status,
 <img align="right" width="300" height="450" src="https://user-images.githubusercontent.com/22457544/131251172-7d771a72-dda2-4f01-adeb-5ec9902e0688.png">
 <img align="left" width="300" height="450" src="https://user-images.githubusercontent.com/22457544/131251183-86bbd9e8-3ce4-4376-abb3-0cd18806cc7e.png">
 
-
-<img align="left" width="300" height="450" src="https://user-images.githubusercontent.com/22457544/131250399-f83b58af-8bc5-4153-bd4d-bb5930ef4fd6.png">
 <img align="left" width="300" height="450" src="https://user-images.githubusercontent.com/22457544/131251481-bf4b31f5-7af7-40dd-bbb4-e8f998715793.png">
 
 
