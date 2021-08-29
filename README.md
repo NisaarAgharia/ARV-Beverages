@@ -15,8 +15,8 @@ Locate Stores,
 Track Daily Status, 
 
 # Screen Shots
-<img align="left" width="600" height="900" src="https://user-images.githubusercontent.com/22457544/131250399-f83b58af-8bc5-4153-bd4d-bb5930ef4fd6.png">
-<img align="right" width="460" height="300" src="https://user-images.githubusercontent.com/22457544/131250569-78e70561-7474-4346-81be-13d1032aab84.png">
+<img align="left" width="300" height="450" src="https://user-images.githubusercontent.com/22457544/131250399-f83b58af-8bc5-4153-bd4d-bb5930ef4fd6.png">
+<img align="right" width="300" height="450" src="https://user-images.githubusercontent.com/22457544/131250569-78e70561-7474-4346-81be-13d1032aab84.png">
 
 ![New Store](https://user-images.githubusercontent.com/22457544/131250606-592cb28f-6b5d-4c31-aa65-1b17355828bf.png)
 
