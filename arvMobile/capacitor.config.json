@@ -1,0 +1,6 @@
+{
+  "appId": "com.arv.app",
+  "appName": "arvMobile",
+  "bundledWebRuntime": false,
+  "webDir": "www"
+}
