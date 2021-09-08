@@ -4,12 +4,8 @@ This is code-base of A Progressive Web app (PWA) / Cross-Platform Mobile App con
 It contains different features that help in day to day activities while running the Business.
 
 ## The Features include - 
-#### Adding New Stores, 
-#### Add New Orders, 
-#### Track Pending Orders, 
-#### Get Map View, 
-#### Locate Stores, 
-#### Track Daily Status, 
+#### Adding New Stores & New Orders, Tracking Orders & Daily Status, Locate Stores & Map View.
+ 
 
 # Screen Shots
 
