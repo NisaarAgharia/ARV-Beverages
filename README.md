@@ -9,7 +9,7 @@ It contains different features that help in day to day activities while running 
 
 # Screen Shots
 
-<img align="left" width="360" height="640" src="https://user-images.githubusercontent.com/22457544/131250974-ca10c399-c923-452d-ab06-d1b3723a9635.png">
+<img align="left" width="360" height="640" src="https://user-images.githubusercontent.com/22457544/136647321-a1bf6585-a482-43ce-9514-4b0db8e3ff8d.gif">
 <img align="right" width="360" height="640" src="https://user-images.githubusercontent.com/22457544/131250399-f83b58af-8bc5-4153-bd4d-bb5930ef4fd6.png">
 
 <img align="left" width="360" height="640" src="https://user-images.githubusercontent.com/22457544/131250569-78e70561-7474-4346-81be-13d1032aab84.png">
@@ -29,7 +29,7 @@ It contains different features that help in day to day activities while running 
 
 
 
-
+<img align="left" width="360" height="640" src="https://user-images.githubusercontent.com/22457544/131250974-ca10c399-c923-452d-ab06-d1b3723a9635.png">
 
 
 
