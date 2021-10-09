@@ -26,14 +26,11 @@ It contains different features that help in day to day activities while running 
 
 <img align="left" width="360" height="640" src="https://user-images.githubusercontent.com/22457544/131250606-592cb28f-6b5d-4c31-aa65-1b17355828bf.png">
 <img align="right" width="360" height="640" src="https://user-images.githubusercontent.com/22457544/131250569-78e70561-7474-4346-81be-13d1032aab84.png">
-
-
-
 <img align="left" width="360" height="640" src="https://user-images.githubusercontent.com/22457544/131250974-ca10c399-c923-452d-ab06-d1b3723a9635.png">
 
 
 
-![20211009_121340](https://user-images.githubusercontent.com/22457544/136647321-a1bf6585-a482-43ce-9514-4b0db8e3ff8d.gif)
+
 
 
 
