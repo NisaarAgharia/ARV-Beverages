@@ -1,13 +1,13 @@
 # ARV-App
 
-This is code-base of A Progressive Web app (PWA) / Cross-Platform Mobile App containing a Location-based Startup Management System of Arv Beverages.
-It contains different features that help in day to day activities while running the Business.
+This is code-base of Cross-Platform Mobile App containing a Location-based Startup Management System of Arv Beverages.
+It contains different features that help in day to day activities while running the Business. Its is also a Progressive Web app (PWA) with AWS backend.
 
 ## The Features include - 
 #### Adding New Stores & New Orders, Tracking Orders & Daily Status, Locate Stores & Map View.
  
 
-# Screen Shots
+# Screen-Shots
 
 <img align="left" width="360" height="640" src="https://user-images.githubusercontent.com/22457544/136647321-a1bf6585-a482-43ce-9514-4b0db8e3ff8d.gif">
 <img align="right" width="360" height="640" src="https://user-images.githubusercontent.com/22457544/131250399-f83b58af-8bc5-4153-bd4d-bb5930ef4fd6.png">
