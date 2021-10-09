@@ -33,6 +33,7 @@ It contains different features that help in day to day activities while running 
 
 
 
+![20211009_121340](https://user-images.githubusercontent.com/22457544/136647321-a1bf6585-a482-43ce-9514-4b0db8e3ff8d.gif)
 
 
 
